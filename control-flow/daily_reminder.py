@@ -20,31 +20,31 @@ def main():
         return
 
     # Process the task based on priority and time sensitivity
-    Reminder = ""
+    message = ""
     
-    # Match case for priority 
+    # Match case for priority
     match priority:
-    case 'high':
-        Reminder = f"'{task}' is a high priority task"
-        if time_bound == 'yes':
-            Reminder += " that requires immediate attention today!"
-        else:
-            Reminder += ". You should address this soon."
-    case 'medium':
-        Reminder = f"Note: '{task}' is a medium priority task"
-        if time_bound == 'yes':
-            Reminder += " that should be completed by the end of the day."
-        else:
-            Reminder += ". Plan to complete it this week."
-    case 'low':
-        Reminder = f"Note: '{task}' is a low priority task"
-        if time_bound == 'yes':
-            Reminder += ". Try to get to it when you can today."
-        else:
-            Reminder += ". Consider completing it when you have free time."
-    # Print the customized Reminder
-    print("\nReminder:", Reminder)
+        case 'high':
+            message = f"'{task}' is a high priority task"
+            if time_bound == 'yes':
+                message += " that requires immediate attention today!"
+            else:
+                message += ". You should address this soon."
+        case 'medium':
+            message = f"Note: '{task}' is a medium priority task"
+            if time_bound == 'yes':
+                message += " that should be completed by the end of the day."
+            else:
+                message += ". Plan to complete it this week."
+        case 'low':
+            message = f"Note: '{task}' is a low priority task"
+            if time_bound == 'yes':
+                message += ". Try to get to it when you can today."
+            else:
+                message += ". Consider completing it when you have free time."
+    
+    # Print the customized reminder with exact "Reminder: " prefix
+    print(f"Reminder: {message}")
 
 if __name__ == "__main__":
     main()
-    
