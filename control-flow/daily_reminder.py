@@ -22,27 +22,26 @@ def main():
     # Process the task based on priority and time sensitivity
     reminder = ""
     
-    # Match case for priority
+    # Match case for priority 
     match priority:
-        case 'high':
-            reminder = f"'{task}' is a high priority task"
-            if time_bound == 'yes':
-                reminder += " that requires immediate attention today!"
-            else:
-                reminder += ". You should address this soon."
-        case 'medium':
-            reminder = f"Note: '{task}' is a medium priority task"
-            if time_bound == 'yes':
-                reminder += " that should be completed by the end of the day."
-            else:
-                reminder += ". Plan to complete it this week."
-        case 'low':
-            reminder = f"Note: '{task}' is a low priority task"
-            if time_bound == 'yes':
-                reminder += ". Try to get to it when you can today."
-            else:
-                reminder += ". Consider completing it when you have free time."
-    
+    case 'high':
+        reminder = f"'{task}' is a high priority task"
+        if time_bound == 'yes':
+            reminder += " that requires immediate attention today!"
+        else:
+            reminder += ". You should address this soon."
+    case 'medium':
+        reminder = f"Note: '{task}' is a medium priority task"
+        if time_bound == 'yes':
+            reminder += " that should be completed by the end of the day."
+        else:
+            reminder += ". Plan to complete it this week."
+    case 'low':
+        reminder = f"Note: '{task}' is a low priority task"
+        if time_bound == 'yes':
+            reminder += ". Try to get to it when you can today."
+        else:
+            reminder += ". Consider completing it when you have free time."
     # Print the customized reminder
     print("\nReminder:", reminder)
 
