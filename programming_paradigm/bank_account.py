@@ -11,9 +11,9 @@ class BankAccount:
             self.__account_balance -= amount
             return True
         return False
-
     def display_balance(self):
-        print(f"Current Balance: ${self.__account_balance: .2f}")
+    print(f"Current Balance: ${self.__account_balance:.2f}")
+
 import sys
 from bank_account import BankAccount
 
